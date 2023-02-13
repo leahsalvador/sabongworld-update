@@ -1,0 +1,265 @@
+#coin-1 {
+    position: relative;
+    margin: 0 auto;
+    width: 110px;
+    height: 110px;
+    cursor: pointer;
+}
+
+#coin-1 div {
+    width: 100%;
+    height: 100%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-box-shadow: inset 0 0 45px rgba(255, 255, 255, .3), 0 12px 20px -10px rgba(0, 0, 0, .4);
+    -moz-box-shadow: inset 0 0 45px rgba(255, 255, 255, .3), 0 12px 20px -10px rgba(0, 0, 0, .4);
+    box-shadow: inset 0 0 45px rgba(255, 255, 255, .3), 0 12px 20px -10px rgba(0, 0, 0, .4);
+}
+
+#coin-2 {
+    position: relative;
+    margin: 0 auto;
+    width: 110px;
+    height: 110px;
+    cursor: pointer;
+}
+
+#coin-2 div {
+    width: 100%;
+    height: 100%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-box-shadow: inset 0 0 45px rgba(255, 255, 255, .3), 0 12px 20px -10px rgba(0, 0, 0, .4);
+    -moz-box-shadow: inset 0 0 45px rgba(255, 255, 255, .3), 0 12px 20px -10px rgba(0, 0, 0, .4);
+    box-shadow: inset 0 0 45px rgba(255, 255, 255, .3), 0 12px 20px -10px rgba(0, 0, 0, .4);
+}
+
+.side-a {
+    border-radius: 50%;
+    /* background-image: url('http://143.198.63.117/image/head.png'); */
+    background-image: url('https://bentebet.com/image/head.png');
+    background-size: cover;
+    display: block;
+}
+
+.side-b {
+    border-radius: 50%;
+    /* background-image: url('http://143.198.63.117/image/tails.png'); */
+    background-image: url('https://bentebet.com/image/tails.png');
+    background-size: cover;
+    display: block;
+}
+
+.side-a-2 {
+    border-radius: 50%;
+    /* background-image: url('http://143.198.63.117/image/tails.png'); */
+    background-image: url('https://bentebet.com/image/tails.png');
+    background-size: cover;
+    display: block;
+}
+
+.side-b-2 {
+    border-radius: 50%;
+    /* background-image: url('http://143.198.63.117/image/head.png'); */
+    background-image: url('https://bentebet.com/image/head.png');
+    background-size: cover;
+    display: block;
+}
+
+#coin-1 {
+    transition: -webkit-transform 1s ease-in;
+    -webkit-transform-style: preserve-3d;
+}
+
+#coin-1 div {
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+}
+
+#coin-2 {
+    transition: -webkit-transform 1s ease-in;
+    -webkit-transform-style: preserve-3d;
+}
+
+#coin-2 div {
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+}
+
+.side-a {
+    z-index: 100;
+}
+
+.side-b {
+    -webkit-transform: rotateX(-180deg);
+}
+
+.side-a-2 {
+    z-index: 100;
+}
+
+.side-b-2 {
+    -webkit-transform: rotateX(-180deg);
+}
+
+#coin-1.heads {
+    -webkit-animation: flipHeads 4s ease-out forwards;
+    -moz-animation: flipHeads 4s ease-out forwards;
+    -o-animation: flipHeads 4s ease-out forwards;
+    animation: flipHeads 4s ease-out forwards;
+}
+
+#coin-1.tails {
+    -webkit-animation: flipTails 4s ease-out forwards;
+    -moz-animation: flipTails 4s ease-out forwards;
+    -o-animation: flipTails 4s ease-out forwards;
+    animation: flipTails 4s ease-out forwards;
+}
+
+#coin-2.tails {
+    -webkit-animation: flipHeads-2 4s ease-out forwards;
+    -moz-animation: flipHeads-2 4s ease-out forwards;
+    -o-animation: flipHeads-2 4s ease-out forwards;
+    animation: flipHeads-2 4s ease-out forwards;
+}
+
+#coin-2.heads {
+    -webkit-animation: flipTails-2 4s ease-out forwards;
+    -moz-animation: flipTails-2 4s ease-out forwards;
+    -o-animation: flipTails-2 4s ease-out forwards;
+    animation: flipTails-2 4s ease-out forwards;
+}
+
+#coin-1.heads-draw {
+    -webkit-animation: flipHeads 4s ease-out forwards;
+    -moz-animation: flipHeads 4s ease-out forwards;
+    -o-animation: flipHeads 4s ease-out forwards;
+    animation: flipHeads 4s ease-out forwards;
+}
+
+#coin-1.tails-draw {
+    -webkit-animation: flipTails 4s ease-out forwards;
+    -moz-animation: flipTails 4s ease-out forwards;
+    -o-animation: flipTails 4s ease-out forwards;
+    animation: flipTails 4s ease-out forwards;
+}
+
+#coin-2.tails-draw {
+    -webkit-animation: flipHeadsDraw-2 4s ease-out forwards;
+    -moz-animation: flipHeadsDraw-2 4s ease-out forwards;
+    -o-animation: flipHeadsDraw-2 4s ease-out forwards;
+    animation: flipHeadsDraw-2 4s ease-out forwards;
+}
+
+#coin-2.heads-draw {
+    -webkit-animation: flipTailsDraw-2 4s ease-out forwards;
+    -moz-animation: flipTailsDraw-2 4s ease-out forwards;
+    -o-animation: flipTailsDraw-2 4s ease-out forwards;
+    animation: flipTailsDraw-2 4s ease-out forwards;
+}
+
+@-webkit-keyframes flipHeads {
+    from {
+        -webkit-transform: scale3d(1, 1, 1) rotateX(0deg);
+        -moz-transform: scale3d(1, 1, 1) rotateX(0deg);
+        transform: scale3d(1, 1, 1) rotateX(0deg);
+    }
+    to {
+        -webkit-transform: scale3d(1, 1, 1) rotateX(1800deg);
+        -moz-transform: scale3d(1, 1, 1) rotateX(1800deg);
+        transform: scale3d(1, 1, 1) rotateX(1800deg);
+    }
+}
+
+@-webkit-keyframes flipTails {
+    from {
+        -webkit-transform: scale3d(1, 1, 1) rotateX(0deg);
+        -moz-transform: scale3d(1, 1, 1) rotateX(0deg);
+        transform: scale3d(1, 1, 1) rotateX(0deg);
+    }
+    to {
+        -webkit-transform: scale3d(1, 1, 1) rotateX(1980deg);
+        -moz-transform: scale3d(1, 1, 1) rotateX(1980deg);
+        transform: scale3d(1, 1, 1) rotateX(1980deg);
+    }
+}
+
+@-webkit-keyframes flipHeadsDraw {
+    from {
+        -webkit-transform: scale3d(1, 1, 1) rotateX(1800deg);
+        -moz-transform: scale3d(1, 1, 1) rotateX(1800deg);
+        transform: scale3d(1, 1, 1) rotateX(1800deg);
+    }
+    to {
+        -webkit-transform: scale3d(1, 1, 1) rotateX(0deg);
+        -moz-transform: scale3d(1, 1, 1) rotateX(0deg);
+        transform: scale3d(1, 1, 1) rotateX(0deg);
+    }
+}
+
+@-webkit-keyframes flipTailsDraw {
+    from {
+        -webkit-transform: scale3d(1, 1, 1) rotateX(1980deg);
+        -moz-transform: scale3d(1, 1, 1) rotateX(1980deg);
+        transform: scale3d(1, 1, 1) rotateX(1980deg);
+    }
+    to {
+        -webkit-transform: scale3d(1, 1, 1) rotateX(0deg);
+        -moz-transform: scale3d(1, 1, 1) rotateX(0deg);
+        transform: scale3d(1, 1, 1) rotateX(0deg);
+    }
+}
+
+@-webkit-keyframes flipHeads-2 {
+    from {
+        -webkit-transform: scale3d(1, 1, 1) rotateX(1800deg);
+        -moz-transform: scale3d(1, 1, 1) rotateX(1800deg);
+        transform: scale3d(1, 1, 1) rotateX(1800deg);
+    }
+    to {
+        -webkit-transform: scale3d(1, 1, 1) rotateX(0deg);
+        -moz-transform: scale3d(1, 1, 1) rotateX(0deg);
+        transform: scale3d(1, 1, 1) rotateX(0deg);
+    }
+}
+
+@-webkit-keyframes flipTails-2 {
+    from {
+        -webkit-transform: scale3d(1, 1, 1) rotateX(0deg);
+        -moz-transform: scale3d(1, 1, 1) rotateX(0deg);
+        transform: scale3d(1, 1, 1) rotateX(0deg);
+    }
+    to {
+        -webkit-transform: scale3d(1, 1, 1) rotateX(1980deg);
+        -moz-transform: scale3d(1, 1, 1) rotateX(1980deg);
+        transform: scale3d(1, 1, 1) rotateX(1980deg);
+    }
+}
+
+@-webkit-keyframes flipHeadsDraw-2 {
+    from {
+        -webkit-transform: scale3d(1, 1, 1) rotateX(0deg);
+        -moz-transform: scale3d(1, 1, 1) rotateX(0deg);
+        transform: scale3d(1, 1, 1) rotateX(0deg);
+    }
+    to {
+        -webkit-transform: scale3d(1, 1, 1) rotateX(1800deg);
+        -moz-transform: scale3d(1, 1, 1) rotateX(1800deg);
+        transform: scale3d(1, 1, 1) rotateX(1800deg);
+    }
+}
+
+@-webkit-keyframes flipTailsDraw-2 {
+    from {
+        -webkit-transform: scale3d(1, 1, 1) rotateX(0deg);
+        -moz-transform: scale3d(1, 1, 1) rotateX(0deg);
+        transform: scale3d(1, 1, 1) rotateX(0deg);
+    }
+    to {
+        -webkit-transform: scale3d(1, 1, 1) rotateX(1980deg);
+        -moz-transform: scale3d(1, 1, 1) rotateX(1980deg);
+        transform: scale3d(1, 1, 1) rotateX(1980deg);
+    }
+}

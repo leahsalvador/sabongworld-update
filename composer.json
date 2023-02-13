@@ -1,0 +1,92 @@
+{
+    "name": "laravel/laravel",
+    "type": "project",
+    "description": "The Laravel Framework.",
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^7.3|^8.0",
+        "doctrine/dbal": "^3.4",
+        "fideloper/proxy": "^4.4",
+        "fruitcake/laravel-cors": "^2.0",
+        "guzzlehttp/guzzle": "^7.0.1",
+        "illuminate/database": "^7.0|^8.0",
+        "illuminate/support": "^7.0|^8.0",
+        "illuminate/validation": "^7.0|^8.0",
+        "joedixon/laravel-translation": "^1.1",
+        "laravel-frontend-presets/argon": "^1.1",
+        "laravel/framework": "^8.12",
+        "laravel/tinker": "^2.5",
+        "laravel/ui": "^3.2",
+        "livewire/livewire": "^2.4",
+        "nesbot/carbon": "^2.46",
+        "pusher/pusher-php-server": "^6.1",
+        "symfony/http-kernel": "^5.0",
+        "tanmuhittin/laravel-google-translate": "^2.0"
+    },
+    "require-dev": {
+        "barryvdh/laravel-ide-helper": "^2.12",
+        "calebporzio/sushi": "^2.1",
+        "facade/ignition": "^2.5",
+        "fakerphp/faker": "^1.9.1",
+        "laravel/framework": "^7.0|^8.0",
+        "laravel/sail": "^1.0.1",
+        "mockery/mockery": "^1.4.2",
+        "nunomaduro/collision": "^5.0",
+        "orchestra/testbench": "^5.0|^6.0",
+        "orchestra/testbench-dusk": "^5.2|^6.0",
+        "phpunit/phpunit": "^9.3.3",
+        "psy/psysh": "@stable"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": [],
+            "providers": [
+                "Livewire\\LivewireServiceProvider",
+                "barryvdh/laravel-ide-helper"
+            ],
+            "aliases": {
+                "Livewire": "Livewire\\Livewire"
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi"
+        ],
+        "post-update-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+            "@php artisan ide-helper:generate",
+            "@php artisan ide-helper:meta"
+        ]
+    }
+}
